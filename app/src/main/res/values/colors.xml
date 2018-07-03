@@ -12,5 +12,6 @@
     <color name="gray_ef">#efefef</color>
     <color name="colorText">#353535</color>
     <color name="common_bg1">#efefef</color>
+    <color name="black">#000000</color>
 
 </resources>
