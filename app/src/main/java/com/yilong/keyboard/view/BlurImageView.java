@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.yilong.keyboard.R;
+import com.yilong.keyboard.utils.ScreenUtils;
 
 
 /**
@@ -14,12 +15,29 @@ import com.yilong.keyboard.R;
 
 public class BlurImageView extends ImageView {
 
+    private Context mContext;
+
     public BlurImageView(Context context) {
         super(context);
+        init(context);
     }
+
 
     public BlurImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init(context);
+
+    }
+
+    private void init(Context context) {
+        this.mContext = context;
+    }
+
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int height = ScreenUtils.getScreenHeight(mContext);
+        super.onMeasure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY));
     }
 
     @Override

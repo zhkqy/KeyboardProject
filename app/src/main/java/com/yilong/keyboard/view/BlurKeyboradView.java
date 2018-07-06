@@ -126,11 +126,12 @@ public class BlurKeyboradView extends FrameLayout {
                         }
                     }
                 }
+                decorView.getViewTreeObserver()
+                        .removeGlobalOnLayoutListener(this);
             }
         };
         decorView.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
     }
-
 
     public void onPause() {
         onPause = true;

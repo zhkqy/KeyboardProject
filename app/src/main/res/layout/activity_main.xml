@@ -25,8 +25,14 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:background="@mipmap/ic_launcher" />
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
         android:background="@mipmap/ic_launcher" />
 
     <View

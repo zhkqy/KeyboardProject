@@ -36,6 +36,7 @@ public class BlurKeyboradActivity extends BaseActivity {
     @Override
     protected void setContentView() {
         setContentView(R.layout.ac_blur_keyboard);
+        setImmergeState();
     }
 
     @Override
